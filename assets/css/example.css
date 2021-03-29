@@ -1,0 +1,20 @@
+/* body {
+  width: 800px;
+  margin: 0 auto;
+} */
+#graph {
+  width: 100%;
+  margin-top: 35px;
+}
+pre {
+display: none;
+}
+
+#invo{
+width: 300px;
+height: 300px;
+margin: auto;
+}
+#timeg{
+  margin-top: 70px;
+}

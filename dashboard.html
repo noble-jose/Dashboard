@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/example.css">
+  <link rel="stylesheet" href="assets/css/morris.css">
+  <link rel="stylesheet" href="assets/css/roundbar.css">
+  <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link href="jquery.lineProgressbar.css" rel="stylesheet" type="text/css">
+ <style>
+
+ </style>
+
+</head>
+<body>
+
+  <section class="first-row">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-7">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Shift</h4></h5>
+              <div class="col-md-6">
+                <ul class="list-group">
+                   <li class="list-group-item">
+                       <div class="avatar-circle"></div>
+                       <div class="text-field">
+                       <p>This week 26 <br>( 200 Hrs )</p>
+                       </div>
+                    </li>
+                   <li class="list-group-item">
+                       <div class="avatar-circle1"></div>
+                       <div class="text-field">
+                       <p>This month 275 <br>(2400 Hrs)</p>
+                       </div>
+                   </li>
+                   <li class="list-group-item">
+                       <div class="avatar-circle2"></div>
+                       <div class="text-field">
+                       <p>Open Shifts 17 <br>(120 Hrs)</p>
+                       </div>
+                   </li>
+                   <li class="list-group-item">
+                       <div class="avatar-circle3"></div>
+                       <div class="text-field">
+                       <p>Unpublished Shifts 28 <br>(160 Hrs)</p>
+                       </div>
+                   </li>
+                   <li class="list-group-item">
+                       <div class="avatar-circle4"></div>
+                       <div class="text-field">
+                       <p>Ongoing Shifts</p>
+                       </div>
+                   </li>
+               </ul>
+              </div>
+              <div class="col-md-6">
+                          <div id="graph"></div>
+              </div>
+            </div>
+            </div>
+
+        </div>
+        <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><h4>Invoice</h4></h5>
+                <div class="col-md-12">
+                  <div id="invo"></div>
+                </div>
+                <div class="col-md-12">
+                  <ul class="list-group">
+                     <li class="list-group-item">
+                         <div class="avatar-circle"></div>
+                         <div class="text-field">
+                         <p>Total Invoice</p>
+                         </div>
+                      </li>
+                     <li class="list-group-item">
+                         <div class="avatar-circle1"></div>
+                         <div class="text-field">
+                         <p>Over Due</p>
+                         </div>
+                     </li>
+                 </ul>
+                  <ul class="list-group">
+                     <li class="list-group-item">
+                         <div class="avatar-circle2"></div>
+                         <div class="text-field">
+                         <p>Ready to Invoice</p>
+                         </div>
+                      </li>
+                     <li class="list-group-item">
+                         <div class="avatar-circle3"></div>
+                         <div class="text-field">
+                         <p>Homes Ready to Invoice</p>
+                         </div>
+                     </li>
+                 </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="second-row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Recruitment</h4></h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card1">
+                <div class="col-9">Top candidate</div>
+                <div class="col-3">
+                  <div class="circle_percent" data-percent="56">
+                      <div class="circle_inner">
+                          <div class="round_per"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card2">
+                <h6>New Registration</h6>
+                <div class="col-9">This Week</div>
+                <div class="col-3">
+                  <div class="circle_percent1" data-percent="20">
+                      <div class="circle_inner1">
+                          <div class="round_per1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent2" data-percent="85">
+                      <div class="circle_inner2">
+                          <div class="round_per2"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card3">
+                <h6>Staff Action</h6>
+                <div class="col-9">This Week</div>
+                <div class="col-3">
+                  <div class="circle_percent1" data-percent="20">
+                      <div class="circle_inner1">
+                          <div class="round_per1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent2" data-percent="85">
+                      <div class="circle_inner2">
+                          <div class="round_per2"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Staff</h4></h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card4">
+                <h6>Complains Warning</h6>
+                <div class="col-9">Due</div>
+                <div class="col-3">
+                  <div class="circle_percent6" data-percent="5">
+                      <div class="circle_inner6">
+                          <div class="round_per6"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">Expaired</div>
+                <div class="col-3">
+                  <div class="circle_percent7" data-percent="8">
+                      <div class="circle_inner7">
+                          <div class="round_per7"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card5">
+                <h6>Complains Warning</h6>
+                <div class="col-9">Staff On Holiday</div>
+                <div class="col-3">
+                  <div class="circle_percent8" data-percent="0">
+                      <div class="circle_inner8">
+                          <div class="round_per8"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">Top candidate</div>
+                <div class="col-3">
+                  <div class="circle_percent9" data-percent="0">
+                      <div class="circle_inner9">
+                          <div class="round_per9"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Clients</h4></h5>
+              <button class="gradient-button">View All</button>
+              <div class="col-md-12" id="data-card6">
+                <div class="col-9">Booked Shift Week</div>
+                <div class="col-3">
+                  <div class="circle_percent10" data-percent="56">
+                      <div class="circle_inner10">
+                          <div class="round_per10"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card7">
+                <div class="col-9">Cancelled Shift</div>
+                <div class="col-3">
+                  <div class="circle_percent11" data-percent="56">
+                      <div class="circle_inner11">
+                          <div class="round_per11"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-12" id="data-card8">
+                <div class="col-9">Inactive This Month</div>
+                <div class="col-3">
+                  <div class="circle_percent12" data-percent="56">
+                      <div class="circle_inner12">
+                          <div class="round_per12"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Third-row">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Time Sheet</h4></h5>
+              <div class="week">Week</div>
+              <div class="col-md-12">
+                 <div id="timeg"></div>
+              </div>
+              <div class="col-md-12">
+                <div class="col-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="text-field">
+                        <p>Total Time Sheet</p>
+                        </div>
+                        <div class="number-circle1">70</div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="text-field">
+                        <p>Sign Off</p>
+                        </div>
+                        <div class="number-circle2">30</div>
+                    </li>
+                  <ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="text-field">
+                        <p>Pending Sign Off</p>
+                        </div>
+                        <div class="number-circle3">52</div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="text-field">
+                        <p>Pending Submittion</p>
+                        </div>
+                        <div class="number-circle4">52</div>
+                    </li>
+                  <ul>
+                </div>
+              </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card" style="height: 659px;">
+              <div class="card-body">
+                <h5 class="card-title"><h4>Top Candidate</h4></h5>
+                <div class="week">Week</div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12" id="pbar">
+                      <div class="col-md-3 col-xl-3">Name1</div>
+                      <div class="col-md-9 col-xl-9">
+                        <div id="jq"></div>
+                      </div>
+                      <div class="col-md-3">Name1</div>
+                      <div class="col-md-9">
+                        <div id="jq1"></div>
+                      </div>
+                      <div class="col-md-3">Name1</div>
+                      <div class="col-md-9">
+                        <div id="jq2"></div>
+                      </div>
+                      <div class="col-md-3">Name1</div>
+                      <div class="col-md-9">
+                        <div id="jq3"></div>
+                      </div>
+                      <div class="col-md-3">Name1</div>
+                      <div class="col-md-9">
+                        <div id="jq4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fourth-row">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><h4>Monthly Invoice / Shift Data</h4></h5>
+              <div class="col-5">
+                <ul>
+                   <li>
+                       <div class="text-field">
+                       <p>Shift</p>
+                       </div>
+                       <div class="invoice-rectangle"></div>
+                    </li>
+                   <li>
+                       <div class="text-field">
+                       <p>Month</p>
+                       </div>
+                       <div class="invoice-rectangle1"></div>
+                   </li>
+                </ul>
+              </div>
+              <div class="col-md-9">
+                <canvas id="sales-chart"></canvas>
+              </div>
+
+            </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+  <script src="assets/js/morris.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+  <script src="assets/js/example.js"></script>
+
+  <!-- plugins:js -->
+  <script src="assets/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="assets/js/Chart.min.js"></script>
+  <!-- Custom js for this page-->
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+  <script src="assets/js/progressbar.js"></script>
+  <!-- <script src="assets/js/jquery.lineProgressbar.js"></script> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery.lineProgressbar.js"></script>
+  </body>
+  </html>
+  <script>
+  $('#jq').LineProgressbar({
+  percentage:80,
+  radius: '15px',
+  height: '20px',
+  });
+  $('#jq1').LineProgressbar({
+  percentage:70,
+  radius: '15px',
+  height: '20px',
+  });
+  $('#jq2').LineProgressbar({
+  percentage:55,
+  radius: '15px',
+  height: '20px',
+  });
+  $('#jq3').LineProgressbar({
+  percentage:69,
+  radius: '15px',
+  height: '20px',
+  });
+  $('#jq4').LineProgressbar({
+  percentage:30,
+  radius: '15px',
+  height: '20px',
+  });
+  </script>
+
+  <script>
+  Morris.Donut({
+    element: 'graph',
+    resize: true,
+    colors: [
+      '#6E7C7C',
+      '#435560',
+      '#C8C6A7',
+      '#92967D',
+      '#000000',
+      '#00BCD4',
+      '#00ACC1',
+      '#0097A7',
+      '#00838F',
+      '#006064'
+    ],
+       labelColor: [
+         '#435560'
+       ],
+    data: [
+      {value: 26, label: 'This week 26 ( 200 Hrs )'},
+      {value: 275, label: 'This month 275 (2400 Hrs)'},
+      {value: 17, label: 'Open Shifts 17 (120 Hrs)'},
+      {value: 28, label: 'Unpublished Shifts 28 (160 Hrs)'},
+      {value: 1, label: 'Ongoing Shifts'}
+    ],
+    formatter: function (x) { return x + ""}
+  }).on('click', function(i, row){
+    console.log(i, row);
+  });
+  </script>
+
+  <script>
+  Morris.Donut({
+    element: 'invo',
+    resize: true,
+    colors: [
+      '#855CF8',
+      '#FF0505',
+      '#B085FF',
+      '#503795',
+      '#FF0505',
+      '#00BCD4',
+      '#00ACC1',
+      '#0097A7',
+      '#00838F',
+      '#006064'
+    ],
+     labelColor: '#435560',
+    data: [
+      {value: 26, label: 'Total Invoice'},
+      {value: 275, label: 'Over Due'},
+      {value: 17, label: 'Ready To Invoice'},
+      {value: 28, label: 'Homes Ready To Invoice'}
+    ],
+    formatter: function (x) { return x + ""}
+  }).on('click', function(i, row){
+    console.log(i, row);
+  });
+  </script>
+
+  <script>
+  Morris.Donut({
+    element: 'timeg',
+    resize: true,
+    colors: [
+      '#440A67',
+      '#93329E',
+      '#B4AEE8',
+      '#FFE3FE',
+      '#FF0505',
+      '#00BCD4',
+      '#00ACC1',
+      '#0097A7',
+      '#00838F',
+      '#006064'
+    ],
+     labelColor: '#435560',
+    data: [
+      {value: 70, label: 'Total Time Sheet'},
+      {value: 30, label: 'Signed Off'},
+      {value: 52, label: 'Pending Sign Off'},
+      {value: 52, label: 'Pending Submittion'}
+    ],
+    formatter: function (x) { return x + ""}
+  }).on('click', function(i, row){
+    console.log(i, row);
+  });
+  </script>
