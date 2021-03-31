@@ -4,16 +4,16 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .card h4{
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #484545;
   margin-top: 20px;
 }
 .list-group-item p{
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   color: #484545;
   margin-left: 50px;
@@ -133,6 +133,22 @@ section.first-row{
       margin-top: 6px;
     }
 
+    @media screen and (max-width: 600px){
+      .first-row .container-fluid .row .col-md-5  .col-md-12 ul{
+            width: 80%;
+            float: left;
+            margin: auto;
+        }
+      .first-row .container-fluid .row .col-md-5 .card .list-group-item{
+          border: none;
+        }
+      .first-row .container-fluid .row .col-md-5 .card .list-group-item p{
+          border: none;
+          font-size: 18px;
+        }
+    }
+
+
 
    /* section- 2 */
    section.second-row{
@@ -175,21 +191,21 @@ section.first-row{
    }
    section.second-row .col-md-4 .card .card-body .col-md-12 h6{
     font-size: 23px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
    }
   section.second-row .col-md-4 .card .card-body .col-md-12 .col-9{
     float: left;
     font-size: 21px;
     color: #414040;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 section.second-row .col-md-4 .card .card-body .col-md-12 .col-3{
     font-size: 23px;
     font-weight: 600px;
     float: left;
     color: #414040;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #data-card1{
@@ -242,7 +258,7 @@ section.Third-row .card .week{
   margin-top: -30px;
   margin-right: 20px;
   color: #817D7D;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: normal;
 }
 section.Third-row .card .col-md-12{
@@ -273,7 +289,7 @@ section.Third-row .card .col-md-12 .list-group-item .text-field p{
   padding-top: 10px;
   margin-top: -10px;
   color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 .number-circle2{
@@ -288,7 +304,7 @@ section.Third-row .card .col-md-12 .list-group-item .text-field p{
   padding-top: 10px;
   margin-top: -10px;
   color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 .number-circle3{
@@ -303,7 +319,7 @@ section.Third-row .card .col-md-12 .list-group-item .text-field p{
   padding-top: 10px;
   margin-top: -10px;
   color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 .number-circle4{
@@ -318,7 +334,7 @@ section.Third-row .card .col-md-12 .list-group-item .text-field p{
   padding-top: 10px;
   margin-top: -10px;
   color: #FFFFFF;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
